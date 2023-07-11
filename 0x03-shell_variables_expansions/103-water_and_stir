@@ -1,3 +1,2 @@
 #!/bin/bash
-WATER="101" STIR="11"; RESULT=$((2#${WATER} + 2#${STIR})); echo "The result is: ${RESULT#*.*}"
-
+echo $(printf %o $(($((5#$(echo $WATER | tr 'water' '01234'))) + $((5#$(echo $STIR | tr 'stir.' '01234'))))) | tr '01234567' 'bestchol')
