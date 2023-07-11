@@ -1,3 +1,3 @@
 #!/bin/bash
-WATER="101" STIR="11" RESULT=$(($(echo "ibase=water; ${WATER}" | dc) + $(echo "ibase=stir; ${STIR}" | dc)))
-echo "The result is: ${RESULT#*.*}"
+WATER="101" STIR="11"; RESULT=$((2#${WATER} + 2#${STIR})); echo "The result is: ${RESULT#*.*}"
+
