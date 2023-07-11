@@ -1,2 +1,3 @@
 #!/bin/bash
-grep -n '^' file.txt | grep -E -v ':[02468]:'
+WATER="101" STIR="11" RESULT=$(($(echo "ibase=water; ${WATER}" | dc) + $(echo "ibase=stir; ${STIR}" | dc)))
+echo "The result is: ${RESULT#*.*}"
